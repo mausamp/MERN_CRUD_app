@@ -1,7 +1,7 @@
 import './App.css'
 import EditDetails from './components/EditDetails'
 import Navbar from './components/Navbar'
-import Home from './components/home'
+import Home from './components/Home'
 import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
 
 const router = createBrowserRouter(
