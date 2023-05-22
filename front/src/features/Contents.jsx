@@ -1,6 +1,5 @@
 import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
     notes: [],
     loading: false,
@@ -8,7 +7,7 @@ const initialState = {
 };
 
 export const fetchData = createAsyncThunk('fetchData', async () => {
-    const response = await fetch(process.env.URL);
+    const response = await fetch(import.meta.env.VITE_APP_URL);
     return response.json()
 })
 

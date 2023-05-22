@@ -11,7 +11,7 @@ export default function ContentForm(props) {
 
         const content = {title, body}
 
-        const response = await fetch('http://localhost:4000/api', {
+        const response = await fetch(import.meta.env.VITE_APP_URL, {
             method: 'POST',
             body: JSON.stringify(content),
             headers: {

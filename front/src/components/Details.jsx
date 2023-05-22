@@ -5,7 +5,7 @@ export default function Details(props) {
   const dispatch = useDispatch()
   const content = props.content
   const handleDelete = async () => {
-    const response = await fetch('http://localhost:4000/api/' + props.content._id, {
+    const response = await fetch(import.meta.env.VITE_APP_URL + props.content._id, {
       method: 'DELETE'
     })
     const json = await response.json()

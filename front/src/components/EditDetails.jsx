@@ -14,7 +14,7 @@ export default function EditDetails() {
 
         const content = {title, body}
 
-        const response = await fetch('http://localhost:4000/api/' + location.state.content._id, {
+        const response = await fetch(import.meta.env.VITE_APP_URL + location.state.content._id, {
             method: 'PATCH',
             body: JSON.stringify(content),
             headers: {
