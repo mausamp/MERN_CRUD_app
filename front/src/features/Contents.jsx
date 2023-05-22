@@ -1,5 +1,6 @@
 import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+
 const initialState = {
     notes: [],
     loading: false,
@@ -7,7 +8,7 @@ const initialState = {
 };
 
 export const fetchData = createAsyncThunk('fetchData', async () => {
-    const response = await fetch('http://localhost:4000/api');
+    const response = await fetch(process.env.URL);
     return response.json()
 })
 
