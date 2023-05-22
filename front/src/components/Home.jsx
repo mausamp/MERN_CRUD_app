@@ -10,19 +10,8 @@ export default function Home() {
 
     const dispatch = useDispatch()
     const state = useSelector((state) => state)
-    // console.log(state)
     useEffect(() => {
-        // const fetchContents = async () => {
-        //     const response = await fetch('http://localhost:4000/api')
-        //     const json = await response.json()
-
-        //     if(response.ok) {
-        //         setContents(json)
-        //     }
-        // }
-
-        // fetchContents()
-
+        
         dispatch(fetchData())
 
         }, [cont])
